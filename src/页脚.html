@@ -19,8 +19,7 @@
 </div>
 
 <script type="text/javascript" src="//apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js?ver=5.2"></script>
-<link type="text/css" rel="stylesheet" media="screen" href="//files.cnblogs.com/files/enjoy233/avatarAnimate.css" />
-<script type="text/javascript" src="//files.cnblogs.com/files/enjoy233/jquery.easing.min.js"></script>
+<!-- <script type="text/javascript" src="//files.cnblogs.com/files/enjoy233/jquery.easing.min.js"></script> -->
 
 <!-- 添加文章目录 -->
 <link href="//blog-static.cnblogs.com/files/enjoy233/nav.my-right.css" rel="stylesheet">
@@ -29,7 +28,7 @@
     $(document).ready(function () {
         $("#cnblogs_post_body").append('<br/><hr/>'+
     '<div class="container">\
-        <div class="row" style="position: relative;">\
+        <div class="row" >\
             <div class="profile__heading--desc col-md-5 col-sm-12 col-xs-12">\
                 <div class="profile__heading--desc-heading">\
                     <span class="profile__heading--desc-heading-dot-warp">\
@@ -74,7 +73,7 @@
     document.onreadystatechange = function () {
         if (document.readyState === 'interactive') {
 
-                    $('#footer').append('<div id="customFooter">            Powered By             <a href="//www.cnblogs.com" target="_blank">Cnblogs</a> |             <a href="//github.com/yanglr/cnblogs-theme-xSimple" target="_blank" title="Fork theme on github" class="enjoyFont">Extremely Simple</a>  Theme By             <a href="//www.cnblogs.com/enjoy233" target="_blank"  class="enjoyFont">Enjoy233</a>, Basic skin - <a href="//www.cnblogs.com/SkinUser.aspx?SkinName=LessIsMore" target="_blank">Less is More</a>.</div><br>');
+                    $('#footer').append('<div id="customFooter">            Powered By             <a href="//www.cnblogs.com" target="_blank">Cnblogs</a> |             <a href="//github.com/yanglr/cnblogs-theme-xSimple" target="_blank" title="Fork theme on github" class="enjoyFont">Extremely Simple</a>  Theme By             <a href="//www.cnblogs.com/enjoy233" target="_blank"  class="enjoyFont">Enjoy233</a>, Basic skin - <a href="//www.cnblogs.com/SkinUser.aspx?SkinName=darkgreentrip" target="_blank">darkgreentrip</a>.</div><br>');
 
         }
         if (document.readyState === 'complete') {
@@ -140,26 +139,6 @@
     }
 
     $(function () {
-        $("#picAvatar li").hover(function () {
-            $(this).find('.text:not(:animated)').animate({
-                    top: "0px"
-                },
-                {
-                    easing: "easeInOutExpo"
-                },
-                50,
-                function () { });
-        }, function () {
-            $(this).find('.text').animate({
-                    top: "176px"
-                },
-                {
-                    easing: "easeInOutExpo"
-                },
-                50,
-                function () { });
-        });
-
         if ($(".cnblogs-markdown").length == 0) {
             $.getScript("//files.cnblogs.com/files/enjoy233/nav.my.contents.js");
         }
@@ -323,25 +302,6 @@
         };
     </script>
     <script src="//files.cnblogs.com/files/enjoy233/tctip.min-ysh.js"></script>
-
-<!-- Baidu Share BEGIN -->
-<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
-    <span class="bds_more">分享到：</span>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-    <a href="#" class="bds_kaixin001" data-cmd="kaixin001" title="分享到开心网"></a>
-    <a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a>
-</div>
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=2883522"></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-    document.getElementById("bdshell_js").src = "//static.dmzj.com/baidushare/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000)
-</script>
-<!-- Baidu Share END -->
 
 <script src="//files.cnblogs.com/files/enjoy233/tocbot.min-v4.4.2.js"></script>
 <script type="text/javascript">
