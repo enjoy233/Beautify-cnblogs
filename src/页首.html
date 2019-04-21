@@ -122,17 +122,8 @@
     }
 </script>
 
-<div class="side_search">
-    <input type="text" id="zzk_q" class="search_input" onkeydown="return zzk_go_enter(event);" placeholder="输入 回车搜索" tabindex="1" autofocus x-webkit-speech>
-    <div id="auto_div">
-    </div>
-    <input onclick="quickdelete()" type="button" class="delete_btn" value="×" title="清空">    
-    <!-- <button id="clearAll" onclick="quickdelete()"><i class="fa fa-times"></i></button> -->
-    <input onclick="zzk_go()" type="button" class="search_btn" value="本博搜索">
-    <input onclick="zzk_go2()" type="button" class="search_btn2" value="园内搜索">
-</div>
-<div id="music163player" style="display: table; text-align: center; width: 40%; height: 55%;">
-    <embed border="0" marginwidth="0" marginheight="0" width=320 height=70 src="//music.163.com/outchain/player?type=2&id=26237342&auto=0&height=66">
+<!-- <div id="music163player" style="display: table; text-align: center; width: 40%; height: 55%;">
+    <embed border="0" marginwidth="0" marginheight="0" width=320 height=70 src="//music.163.com/outchain/player?type=2&id=26237342&auto=0&height=66"> -->
 </div>
 
 <div id="customHeader">
@@ -148,9 +139,9 @@
 <a  id="myH2" style="color:gray;font-family:微软雅黑;font-size: 15px;font-weight: bold; margin-bottom: 10px;" href="javascript:void(0);">极简编程：IT人实践之路</a>
 </div>
 
-<div class="newPostInRight">    
+<!-- <div class="newPostInRight">    
        <a href="//i.cnblogs.com/EditPosts.aspx?opt=1" class="aa" target="_blank">写文章</a> 
-</div>
+</div>  -->
 
 <div id='forkMe'>
     <a href="//github.com/yanglr" target="_blank" style="position: absolute;right: 0;  top: 0; z-index: 100;">
@@ -190,10 +181,10 @@
     $(function () {
         $('#customHeader').append('<div id="customBlogStat" style="color:white; font-weight:bold; margin-top: 10px; margin-left: 8px;">' + $('#blog_stats').html() + '</div>');
         initCommentData();
-       <!-- 指定返回底部位置 postEnd -->
+       /* 指定返回底部位置 postEnd */
        if (document.location.href.indexOf('/p/') > 0 || document.location.href.indexOf('/archive/') > 0 || document.location.href.indexOf('/articles') > 0 || document.location.href.indexOf('/diary/') > 0) {
             $("#home").prepend('<a href="#signature" alt="一键置底" title="快速置底"><div id="postEnd" style="zoom:0;"></div></a>');
-            $('.postTitle').append('<a id="quickEdit" alt="编辑" title="快速编辑" style="float: right; margin-top:-13.5px; margin-right:4px;"></a>');
+            $('.postTitle').append('<a id="quickEdit" alt="编辑" title="快速编辑" style="float: right; background: lightgray;"></a>');
             $('#post_detail').find('#quickEdit').html("<a id='customEdit' href='//i.cnblogs.com/EditPosts.aspx?postid=" + cb_entryId + "'>编辑<i class='fa fa-pencil' style='font-size: 15px; display: inline; margin-left: 4px; color:black;'></i></a>");    /* 编辑✎ */
         }
 
