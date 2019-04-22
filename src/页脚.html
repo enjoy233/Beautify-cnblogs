@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="//files.cnblogs.com/files/enjoy233/copyCodeButton.css">
 <link rel="stylesheet" href="//files.cnblogs.com/files/enjoy233/SignatureStyle.css">
 
+<a id="back2Top" title="置顶" href="#">&#10148;</a>
+
 <div class="scrollBtn" id="scrollBtn">
     <ul class="clearfix">
         <li class="sB-home">
@@ -64,6 +66,24 @@
         }
          
     });
+
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+
 </script>
 
 <script src="//files.cnblogs.com/files/enjoy233/highlightjs-line-numbers.min-v2.6.js"></script>
