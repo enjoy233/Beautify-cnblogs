@@ -406,10 +406,6 @@ a:active {
     display: block;
 }
 
-.day, #post_detail {
-    margin-left: 20px;
-}
-
 .postDesc {
     font-size: 10px !important;
 }
@@ -445,7 +441,7 @@ a:active {
 }
 
 #cnblogs_post_body h2 {
-    font-family: Consolas, "Microsoft YaHei", monospace !important;
+    font-family: "Microsoft YaHei", monospace !important;
     font-size: 26px;
     font-weight: bold;
     line-height: 1.5;
@@ -659,9 +655,8 @@ div#signature {
 }
 
 #feed_icon {
-    border: #000 solid 2px;
     display: block;
-    margin: 50px auto;
+    margin: 10px auto;
     border-radius: 50%;
     transition: all 2.0s;
 }
@@ -793,6 +788,11 @@ div.asideMdContents p {
     z-index: 101;
 }
 
+.cnblogs-markdown code, .cnblogs-post-body code {
+    font-family:Verdana, Arial, Helvetica, sans-serif, "Microsoft YaHei" !important;
+}
+
+
 /* 单行代码 */
 .cnblogs-markdown code {
     font-family: Helvetica, "Microsoft YaHei", monospace !important;
@@ -810,7 +810,7 @@ div.asideMdContents p {
  
 /* 多行代码, 引用 */
 .cnblogs-markdown .hljs {
-    font-family: Consolas, "Microsoft YaHei", monospace !important;
+    font-family: "Microsoft YaHei", monospace !important;
     font-size: 16px !important;
     line-height: 1.5 !important;
     padding: 5px !important;
@@ -819,7 +819,7 @@ div.asideMdContents p {
 }
 
 .cnblogs-markdown .hljs, .cnblogs-post-body .hljs {
-    font-family: "Consolas",sans-serif !important;
+    font-family: "Microsoft YaHei", monospace, sans-serif !important;
     font-size: 15px! important;
 }
 
@@ -872,6 +872,16 @@ code {
     padding: 2px 4px !important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-size: initial !important;
+    font-weight: bold;
+}
+
+.newsItem .catListTitle {
+    display: block !important;
+    padding: 0.5px !important;
+}
+
 #cnblogs_post_body h1, h2, h3, h4, h5, h6 {
     color: #314659;
     margin-top: 25px;
@@ -888,39 +898,6 @@ code {
     font-size: 16px;
     text-indent: 0;
 }
- 
-/* 标题样式 */
-#cnblogs_post_body h1 {
-    font-family: Georgia,Times New Roman,Times,sans-serif, monospace !important;
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 1.5;
-    margin: 10px 0;
-}
-
-#cnblogs_post_body h2 {
-    font-family: Consolas, "Microsoft YaHei", monospace !important;
-    font-size: 26px;
-    font-weight: bold;
-    line-height: 1.5;
-    margin: 20px 0;
-}
-
-#cnblogs_post_body h3 {
-    font-family: Georgia,Times New Roman,Times,sans-serif, monospace !important;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.5;
-    margin: 10px 0;
-}
-
-#cnblogs_post_body h4 {
-    font-family: Georgia,Times New Roman,Times,sans-serif, monospace !important;
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-/* 标题样式设置结束 */
 
 #cnblogs_post_body img {
     border: 2px solid #dedede;
@@ -1077,10 +1054,15 @@ div.asideMdContents > p.js-toc > ol > li:nth-child(2) > ol > li {
     padding-left: 20px !important;
 }
 
+.toc-list li a {
+    text-decoration: none !important;
+}
+
 .input_my_zzk_new {
     width: 98%;
     vertical-align: middle !important;
     height: 20px;
+    margin-top: 10px;
 }
 
 #leftcontentcontainer ul li {
@@ -1097,4 +1079,35 @@ div.asideMdContents > p.js-toc > ol > li:nth-child(2) > ol > li {
 
 #sideCatalogBtn {
         right: -110px !important;
+}
+
+#p_b_follow > a {
+    color: #FFFFFF;
+    background-color: #0084FF;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 32px;
+    padding: 4px 8px 4px 6px;
+}
+
+/*  不显示Calendar中u类元素的下划线 */
+#blogCalendar > tbody > tr > td > a > u {
+   text-decoration: none !important;
+}
+
+h3.catListTitle {
+    background: none repeat scroll 0 0 #16B3A3;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 0 1px #16B3A3, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.sidebar-block {
+    background: #FAFCFD;
+    padding-left: 5px;
+}
+
+.catListEssay ul li a, .catListLink ul li a, .catListNoteBook ul li a, .catListTag ul li a, .catListPostCategory ul li a, .catListPostArchive ul li a, .catListImageCategory ul li a, .catListArticleArchive ul li a, .catListView ul li a, .catListFeedback ul li a, .catListComment ul li a, .catListBlogRank ul li a, .catList ul li a .catListArticleCategory ul li a {
+    font-size: 14px !important;
 }
