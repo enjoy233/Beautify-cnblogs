@@ -783,8 +783,8 @@ div.asideMdContents p {
 
 #addThis {
     position: fixed;
-    bottom: 5px;
-    left: 85px;
+    bottom: 10px;
+    left: 5px;
     z-index: 101;
 }
 
@@ -1110,4 +1110,55 @@ h3.catListTitle {
 
 .catListEssay ul li a, .catListLink ul li a, .catListNoteBook ul li a, .catListTag ul li a, .catListPostCategory ul li a, .catListPostArchive ul li a, .catListImageCategory ul li a, .catListArticleArchive ul li a, .catListView ul li a, .catListFeedback ul li a, .catListComment ul li a, .catListBlogRank ul li a, .catList ul li a .catListArticleCategory ul li a {
     font-size: 14px !important;
+}
+
+.feedbackItem a {
+    text-decoration: none !important;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #D2D8DE;
+  padding: 25px;
+  font-size: 20px;
+}
+
+.toBottom {
+    background: #ccc;
+    float: right;
+    /* opacity: 0.8; */
+    height: 25px !important;
+    width: 30px !important;
+    padding: 5px;
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #000;
 }
