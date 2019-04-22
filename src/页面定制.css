@@ -608,7 +608,7 @@ a.chatPriv:hover {
     border: 2px solid #04A292;
     position: fixed;
     background-color: #FFFFCC;
-   z-index: 100;
+    z-index: 100;
     width: 110px !important;
     border: 3px solid #55895b !important;
 }
@@ -620,8 +620,8 @@ a.chatPriv:hover {
 /*推荐悬浮*/
 #div_digg {
     position: fixed;
-    bottom: 45px !important;
-    right: 100px;
+    bottom: 20px !important;
+    right: 45px;
     padding: 5px;
     width: 48px;
     background-color: rgba(255,255,255,0.7);  /*半透明#FFF*/
