@@ -21,8 +21,8 @@ body {
 #customHeader {
     /* position: relative; */
     height: 340px;
-    margin-top:10px; 
-    margin-right: 6%;
+    margin-top:20px; 
+    margin-right: 4%;
     background: #020031;
     background: -moz-linear-gradient(45deg,#020031 0,#6d3353 100%);
     background: -webkit-gradient(linear,left bottom,right top,color-stop(0%,#020031),color-stop(100%,#6d3353));
@@ -1161,4 +1161,41 @@ div.sticky {
 #back2Top:hover {
     background-color: #DDF;
     color: #000;
+}
+
+.github-corner svg {
+    fill: #2D8CF0;
+}
+
+div#forkme {
+    margin-top: -8px;
+}
+
+/* github左上角图标动的样式 */
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%,100% {
+        transform: rotate(0)
+    }
+
+    20%,60% {
+        transform: rotate(-25deg)
+    }
+
+    40%,80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
 }
