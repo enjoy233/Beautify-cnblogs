@@ -559,7 +559,7 @@ textarea {
         font-size: 14px !important;
         min-height: 2em !important;
         width: 94% !important;
-	background: url('//www.cnblogs.com/images/cnblogs_com/enjoy233/1389971/o_forward.png') no-repeat -2px;
+	background: url('//www.cnblogs.com/images/cnblogs_com/enjoy233/1389971/o_forward.png') no-repeat -2px -2px;
 	border: 1px solid #C1CDCD;
 	border-radius: 6px;
 	box-shadow: 0 0 0 1px #C1CDCD, 1px 1px 1px 1px rgba(10, 10, 0, 0.5);
