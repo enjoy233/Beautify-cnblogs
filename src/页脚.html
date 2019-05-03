@@ -42,7 +42,7 @@
                         <div id="signature">\
                             <span>作者：<a href="//www.cnblogs.com/enjoy233/" target="_blank" title="Enjoy233的博客" style="border-bottom: none !important; color: brown; font-family: &quot;Lucida Handwriting&quot;,&quot;Segoe Print&quot;">Bravo Yeung</a></span><br> \
                             <section>出处：<a href="//enjoy233.cnblogs.com" target="_blank" title="enjoy233"\
-                                style="border-bottom: none !important; color: blue; font-family: &quot;Segoe Print&quot;, &quot;Segoe Script&quot;">https://enjoy233.cnblogs.com/</a></section> <br><p> 如果，您希望更容易地发现我的新文章，不妨点击一下绿色通道的<a href="javascript:void(0);" onclick="follow(\'27f8db64-eee4-e111-aa3f-842b2b196315\');" target="_self">【<strong>关注我</strong>】</a>。</p> <span style="line-height: 55px;">如果您觉得阅读本文对您有帮助，请点击一下右下方的<b style="color: blue; font-size: 16px">推荐</b>按钮，您的<b style="color: blue; font-size: 16px">推荐</b>将是我写作的最大动力！ <br>版权声明：本文为博主原创或转载文章，欢迎转载，<b>但转载文章之后必须在文章页面明显位置注明出处</b>，否则\
+                                style="border-bottom: none !important; color: blue; font-family: &quot;Segoe Print&quot;, &quot;Segoe Script&quot;">https://enjoy233.cnblogs.com/</a></section> <br><p> 如果，您希望更容易地发现我的新文章，不妨点击一下绿色通道的<a href="javascript:void(0);" onclick="follow(\'27f8db64-eee4-e111-aa3f-842b2b196315\');" target="_self">【<strong>关注我</strong>】</a>，亦可微信搜索公众号<strong>「<font style="color: #2ca6cb; font-weight: bold;">dotNET匠人</font>」</strong>关注我。</p> <span style="line-height: 55px;">如果您觉得阅读本文对您有帮助，请点击一下右下方的<b style="color: blue; font-size: 16px">推荐</b>按钮，您的<b style="color: blue; font-size: 16px">推荐</b>将是我写作的最大动力！ <br>版权声明：本文为博主原创或转载文章，欢迎转载，<b>但转载文章之后必须在文章页面明显位置注明出处</b>，否则\
 保留追究法律责任的权利。如您有任何疑问或者授权方面的协商，请&nbsp;<a class="chatPriv" alt="私信我" style="border-bottom: none !important; position: absolute" id="chatPriv" title="私信我" \ href="//msg.cnblogs.com/send/Enjoy233" target="_blank"></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. </span></div>\
                     </div>\
                 </div>\
@@ -392,119 +392,7 @@ $(document).ready(function() {
 // $('<p style="color:blue;">目录</p>').prependTo('.js-toc');
 </script>
 
-<script  type="text/javascript">
-    var selfLogin = true;
-    if($('#tbCommentAuthor').val() === undefined || $('#tbCommentAuthor').val() != 'Enjoy233')
-        selfLogin = false;
-
-    var isIe = (navigator.userAgent.toLowerCase().indexOf("msie") != -1
-        || navigator.userAgent.toLowerCase().indexOf("trident") != -1);
-        
-    var day = new Date();
-    var fulltime = day.getFullYear() + "-" + ('0' + (day.getMonth() + 1)).slice(-2) + "-" + ('0' + day.getDate()).slice(-2) + " "
-        + ('0' + day.getHours()).slice(-2) + ":" + ('0' + day.getMinutes()).slice(-2) + ":" + ('0' + day.getSeconds()).slice(-2);
-
-    var pageInfo = '\r\n---------------------\r\n著作权归作者所有。\r\n'
-    + '商业转载请联系作者获得授权，非商业转载请注明出处。\r\n'
-    + '作者：Bravo Yeung\r\nEmail: legege007@126.com\r\n源地址：' + document.location.href
-    + '\r\n复制时间: ' + fulltime
-    + '\r\n来源：博客园cnblogs\r\n© 版权声明：本文为博主原创文章，转载请附上博文链接！';    
-
-    function getIeVersion() {
-            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
-            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器  
-            var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器  
-            var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
-            if(isIE) {
-                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
-                reIE.test(userAgent);
-                var fIEVersion = parseFloat(RegExp["$1"]);
-                if(fIEVersion > 6){
-                    return fIEVersion;
-                }else{
-                    return 6;
-                }
-            } else if(isEdge) {
-                return 'edge';//edge
-            } else if(isIE11) {
-                return 11; //IE11  
-            }else{
-                return -1;//不是ie浏览器
-            }
-        }
-
-        //自定义设置剪贴板内容
-        function setClipboardText(event, maxCount){
-            var IEVersion = getIeVersion();
-            //阻止元素发生默认的行为（例如，当点击提交按钮时阻止对表单的提交）。
-            if(IEVersion>-1 && IEVersion!='edge' && IEVersion<11){
-                //IE
-                window.event.returnValue = false;
-            }else{
-                event.preventDefault();
-            }
-
-            var textData = '';
-            var htmlData = '';
-            if(IEVersion>-1 && IEVersion!='edge' && IEVersion<11){
-                //低版本IE
-                //选择的文本
-                textData = document.selection.createRange().text;
-                //选择的html
-                htmlData = document.selection.createRange().htmlText;
-            }else{
-
-                var selectRange = window.getSelection().getRangeAt(0);
-                //选择的文本
-                textData = selectRange.toString();
-
-                //选择的html
-                var node = document.createElement('div');
-                node.appendChild(selectRange.cloneContents());
-                htmlData = node.innerHTML;
-
-            }
-
-            //如果复制的内容超过maxCount个字符则添加版权信息
-            if(textData.length >= maxCount){
-                //文本格式附加版权信息
-                textData = (textData + pageInfo).replace(/\n/g, '\r\n');
-                //html格式附加版权信息
-                htmlData = '<div>' + htmlData + pageInfo.replace(/\n/g, '<br>') + '</div>';
-            }
-
-            if(IEVersion>-1 && IEVersion!='edge') {  //IE
-                return window.clipboardData.setData("text", textData);
-            } else {
-                event.clipboardData.setData("text/html", htmlData);
-                event.clipboardData.setData("text/plain",textData);
-            }
-        }
-
-        if (isIe) {
-            document.body.oncopy = function (e) {
-                if (!selfLogin) {
-                    setClipboardText(e, 6);
-                }                
-            }
-        }
-        else {
-            document.addEventListener('copy', function (ev) {
-                var targetHTML = $.trim($(ev.target).html());
-                // console.log("targetHTML:" + targetHTML)
-                if (targetHTML == "") return;
-                if (!(targetHTML.startsWith('<table class="hljs-ln"') && targetHTML.endsWith('</table>')) || !selfLogin)  // isLogined
-                {
-                    var selected = window.getSelection();
-                    var selectedText = selected.toString();
-                    var copyRightStr = (selectedText + (selfLogin ? "" : pageInfo)).replace(/\n/g, '\r\n'); // Solve the line breaks conversion issue
-                    ev.clipboardData.setData('text/plain', copyRightStr); // IE不支持` template string
-                    ev.preventDefault();
-                }
-            });
-        }
-
-</script>
+<!-- <script src="//files.cnblogs.com/files/enjoy233/customGlobalCopy.js"></script> -->
 
 <div id="addThis">
 <div class="at-share-tbx-element addthis-smartlayers addthis-animated at4-show">
@@ -525,4 +413,4 @@ $(document).ready(function() {
 </div>
 </div>
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c9576e41b0ceff4" async="async"></script>
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c9576e41b0ceff4" async="async"></script> -->
