@@ -17,6 +17,14 @@ body {
     font-size: 0.9em;
 }
 
+p {
+    line-height: 2.0;
+}
+
+li {
+    line-height: 2.0;
+}
+
 /* 头部 */
 #customHeader {
     /* position: relative; */
