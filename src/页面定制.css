@@ -171,6 +171,7 @@ a#customEdit {
 }
 
 .chi {
+    font-family: 'stfzjjgangbixin17c2fb7ee61f271';
     position: relative;
     color: #85C2F2;
     font-weight: 400;
@@ -567,7 +568,7 @@ textarea {
         font-size: 14px !important;
         min-height: 2em !important;
         width: 94% !important;
-	background: url('//www.cnblogs.com/images/cnblogs_com/enjoy233/1389971/o_forward.png') no-repeat -2px -2px;
+	background: url('//www.cnblogs.com/images/cnblogs_com/enjoy233/1389971/o_forward.png') no-repeat -2px;
 	border: 1px solid #C1CDCD;
 	border-radius: 6px;
 	box-shadow: 0 0 0 1px #C1CDCD, 1px 1px 1px 1px rgba(10, 10, 0, 0.5);
@@ -818,7 +819,7 @@ div.asideMdContents p {
  
 /* 多行代码, 引用 */
 .cnblogs-markdown .hljs {
-    font-family: "Microsoft YaHei", monospace !important;
+    font-family: Heuristica, "Microsoft YaHei", monospace !important;
     font-size: 16px !important;
     line-height: 1.5 !important;
     padding: 5px !important;
@@ -827,7 +828,7 @@ div.asideMdContents p {
 }
 
 .cnblogs-markdown .hljs, .cnblogs-post-body .hljs {
-    font-family: "Microsoft YaHei", monospace, sans-serif !important;
+    font-family: Consolas, monospace !important;
     font-size: 15px! important;
 }
 
