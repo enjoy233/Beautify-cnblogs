@@ -196,6 +196,7 @@ $(document).ready(function() {
                 //console.dir(item);  // 打印Object
                 
                 var langMap = {
+                    "accesslog": "text",
                     "ini": "text",
                     "html": "HTML",
                     "xml": "XML",
@@ -299,16 +300,13 @@ $(document).ready(function() {
                 var lang = langStr;
 
                 if(langStr == 'hljs') lang = 'text';
-                else lang = langStr.replace('hljs','').trim();
-                
-                if(langStr.indexOf('language-nginx') > -1)
-                {
-                    lang = "nginx";                    
+                if(langStr.indexOf('language-') == -1)
+                    lang = "text";
+                else {
+                    pos1 = langStr.indexOf('-');
+                    pos2 = langStr.indexOf(' ');
+                    var lang = langStr.substr(pos1+1, pos2 - pos1 - 1);
                 }
-                else if(langStr.indexOf('nginx') > -1){
-                    lang = 'text';
-                }
-                else lang = lang.replace('language-','');
 
                 if (lang in langMap) displayLangText = langMap[lang];
                 else displayLangText = lang;
