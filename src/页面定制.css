@@ -171,7 +171,7 @@ a#customEdit {
 }
 
 .chi {
-    font-family: 'stfzjjgangbixin17c2fb7ee61f271';
+    /* font-family: 'stfzjjgangbixin17c2fb7ee61f271'; */
     position: relative;
     color: #85C2F2;
     font-weight: 400;
@@ -381,6 +381,11 @@ a:active {
     text-decoration: none;
 }
 
+/* 解决导航下拉菜单的问题, 2020-09-16 */
+.dropdown {
+    position: unset !important;
+}
+
 /*鼠标移上去，改变背景颜色*/
 #topNav li a:hover, .dropdown:hover .dropbtn {
       background-color: #ede9e7f0;
@@ -395,7 +400,7 @@ a:active {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 102px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -526,6 +531,10 @@ em {
     max-width: 900px !important;
 }
 
+.comment_textarea {
+    width: unset !important;
+}
+
 /* 隐藏踩按钮 */
 .comment_bury {
 	display: none !important;
@@ -538,16 +547,6 @@ em {
 
 textarea {
     background: none;
-}
-
-#tbCommentBody {
-    padding: 10px 0px 10px 0px;
-    border: 2px solid lightsteelblue;
-    height: 225px;
-    min-height: 120px;
-    max-height: 500px;
-    width: 95% !important;
-    /* background: url(//files-cdn.cnblogs.com/files/enjoy233/kuawo1.gif) no-repeat right bottom;  */
 }
 
 .comment_btn {
@@ -788,6 +787,10 @@ div.asideMdContents p {
 #sideBarMain ul li a:hover {
      background-color: lightgray !important;
      border-radius: unset; 
+}
+
+#sideBar {
+    width: 272px !important;
 }
 
 #addThis {
